@@ -6,8 +6,8 @@ import plotly.express as px
 df = pd.read_csv('lesson23/Advertising_F.csv')
 st.title("Advertising Effectiveness Humza")
 
-st.sidebar.head("Filters")
-x_var=st.selectbox("X axis",["TV", "radio", "newspaper"])
+st.sidebar.header("Filters")
+x_var = st.sidebar.selectbox("X axis", ["TV", "radio", "newspaper"])
 #show scatterplot
 fig = px.scatter(df,x=x_var,y='sales',
            labels={'TV':'Tv add spend','radio':'Radio add spend'})
